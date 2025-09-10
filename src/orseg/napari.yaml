@@ -1,0 +1,30 @@
+name: orseg
+display_name: Orseg
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/technical_references/manifest.html#fields for valid categories
+# categories: []
+contributions:
+  commands:
+    - id: orseg.make_container_widget
+      python_name: orseg:ImageThreshold
+      title: Make threshold Container widget
+    - id: orseg.make_magic_widget
+      python_name: orseg:threshold_magic_widget
+      title: Make threshold magic widget
+    - id: orseg.make_function_widget
+      python_name: orseg:threshold_autogenerate_widget
+      title: Make threshold function widget
+    - id: orseg.make_qwidget
+      python_name: orseg:ExampleQWidget
+      title: Make example QWidget
+  widgets:
+    - command: orseg.make_container_widget
+      display_name: Container Threshold
+    - command: orseg.make_magic_widget
+      display_name: Magic Threshold
+    - command: orseg.make_function_widget
+      autogenerate: true
+      display_name: Autogenerate Threshold
+    - command: orseg.make_qwidget
+      display_name: Example QWidget
