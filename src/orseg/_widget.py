@@ -57,9 +57,6 @@ from orseg.sam2.build_sam import build_sam2
 from orseg.sam2.sam2_image_predictor import SAM2ImagePredictor
 from orseg.utils import *
 
-sys.path.append(get_base_dir())
-print(os.getcwd())
-
 sys.path.append(os.path.join(get_base_dir(), "orseg"))
 print(os.getcwd())
 
