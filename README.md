@@ -11,17 +11,34 @@
 
 Segtree is a plugin designed for the segmentation of individual trees from imagery. It isolates tree in ovelapping tree context.
 
-----------------------------------
+![alt text](<src/orseg/Screenshot from 2025-09-10 17-01-24.png>)
 
-This [napari] plugin was generated with [copier] using the [napari-plugin-template] (None).
+## How it works
 
-<!--
-Don't miss the full getting started guide to set up your new package:
-https://github.com/napari/napari-plugin-template#getting-started
+The user provides as input a **color image** and, optionally, a **trunk detector mask**.
+With a single click, the plugin automatically places prompt points on the detected trunk labels. These prompts are then used by [SAM2 HQ](https://github.com/SysCV/sam-hq/blob/main/sam-hq2/README.md#citing-hq-sam-2) (Segment Anything Model v2, High Quality mode) to segment the tree foliage associated with each trunk.
+![alt text](<src/orseg/Screenshot from 2025-09-10 15-30-09.png>)
 
-and review the napari docs for plugin developers:
-https://napari.org/stable/plugins/index.html
--->
+## Article : Individual Segmentation of Intertwined Apple Trees in a Row via Prompt Engineering
+
+METUAREA, Herearii, LAURENS, François, GUERRA, Walter, et al. [Individual Segmentation of Intertwined Apple Trees in a Row via Prompt Engineering](https://www.mdpi.com/1424-8220/25/15/4721). Sensors, 2025, vol. 25, no 15, p. 4721.
+
+## Citing segtree
+
+If you find segtree useful in your research, please star ⭐ this repository and consider citing 📝:
+
+```
+@article{metuarea2025individual,
+  title={Individual Segmentation of Intertwined Apple Trees in a Row via Prompt Engineering},
+  author={Metuarea, Herearii and Laurens, Fran{\c{c}}ois and Guerra, Walter and Lozano, Lidia and Patocchi, Andrea and Van Hoye, Shauny and Dutagaci, Helin and Labrosse, Jeremy and Rasti, Pejman and Rousseau, David},
+  journal={Sensors},
+  volume={25},
+  number={15},
+  pages={4721},
+  year={2025},
+  publisher={MDPI}
+}
+```
 
 ## Installation
 
@@ -44,6 +61,14 @@ To install latest development version :
 pip install git+https://github.com/hereariim/orseg.git
 ```
 
+## Contact
+
+Imhorphen team, bioimaging research group
+
+42 rue George Morel, Angers, France
+
+- Pr David Rousseau, david.rousseau@univ-angers.fr
+- Herearii Metuarea, herearii.metuarea@univ-angers.fr
 
 
 ## Contributing
